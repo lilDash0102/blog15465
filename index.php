@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <?php if(isset($_SESSION['error']))
+    {
+        unset($_SESSION['error']);
+    } ?>
+    <!-- CABEZERA   -->
+    <?php require_once "incluide/header.php"; session_start(); ?>
+
+    <!-- CONTENIDO -->
+    <?php  require_once "incluide/contenido.php"?>
+
+    <!-- FOOTER -->
+    <?php require_once "incluide/footer.php"?>
+</body>
+
+</html>
